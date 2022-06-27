@@ -1,6 +1,6 @@
 import React, {MouseEventHandler, useRef} from "react";
 import styled from "styled-components";
-import logo from "../logo.svg";
+import logo from "../assets/eye-svgrepo-com.svg";
 
 export const MagneticButton = () => {
     const magneticBackground = useRef(null);
