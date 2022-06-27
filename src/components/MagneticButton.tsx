@@ -68,8 +68,8 @@ const getSize = (multiplier: number) => {
 }
 
 const MagneticElement = styled.div`
-        width: {getSize(0.3)};
-        height: {getSize(0.3)};
+        width: ${getSize(0.3)};
+        height: ${getSize(0.3)};
         z-index: 2;
         pointer-events: none;
         img {
@@ -82,7 +82,7 @@ const MagneticContainer = styled.button`
     border: none;
     background-color: transparent;
     position: relative;
-    padding: {getSize(0.8)};
+    padding: ${getSize(0.8)};
     margin: 0;
     display: flex;
     align-items: center;
@@ -92,11 +92,11 @@ const MagneticContainer = styled.button`
     `
 const MagneticBackground = styled.div`
     background-color: #46fcb4;
-    border-radius: {getSize(0.2)};
+    border-radius: ${getSize(0.2)};
     position: absolute;
-    width: {getSize(0.6)};
-    height: {getSize(0.6)};
+    width: ${getSize(0.6)};
+    height: ${getSize(0.6)};
     z-index: 1; 
     pointer-events: none;
-    box-shadow: 0 {getSize(0.3)} {getSize(1)} 0 rgba(#46fcb4, 0.85);
+    box-shadow: 0 ${getSize(0.3)} ${getSize(1)} 0 rgba(#46fcb4, 0.85);
     `
