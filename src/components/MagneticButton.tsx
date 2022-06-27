@@ -84,7 +84,7 @@ const MagneticContainer = styled.button`
         pointer-events: none;
         img {
             height: 100%;
-            vertical-align: bottom;
+            width: 100%;
         }
     }
     `
