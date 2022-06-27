@@ -54,9 +54,9 @@ export const MagneticButton = () => {
 
     return (
         <MagneticContainer onMouseMove={move} onMouseEnter={start} onMouseLeave={end}>
-            <MagneticElement ref={magneticElement}>
-                <img src={logo} style={{width: 100, height: 100}}/>
-            </MagneticElement>
+            <div className={"magnetic-element"} ref={magneticElement}>
+                <img src={logo}/>
+            </div>
             <MagneticBackground ref={magneticBackground}/>
         </MagneticContainer>
     )
@@ -66,17 +66,6 @@ const size = 20;
 const getSize = (multiplier: number) => {
     return `${size * multiplier}rem`;
 }
-
-const MagneticElement = styled.div`
-        width: ${getSize(0.3)};
-        height: ${getSize(0.3)};
-        z-index: 2;
-        pointer-events: none;
-        img {
-            height: 100%;
-            vertical-align: bottom;
-        }
-`
 
 const MagneticContainer = styled.button`
     border: none;
@@ -88,15 +77,24 @@ const MagneticContainer = styled.button`
     align-items: center;
     justify-content: center;
     cursor: pointer;
-
+    .magnetic-element {
+        width: ${getSize(0.3)};
+        height: ${getSize(0.3)};
+        z-index: 2;
+        pointer-events: none;
+        img {
+            height: 100%;
+            vertical-align: bottom;
+        }
+    }
     `
 const MagneticBackground = styled.div`
-    background-color: #46fcb4;
+    background-color: transparent;
     border-radius: ${getSize(0.2)};
     position: absolute;
     width: ${getSize(0.6)};
     height: ${getSize(0.6)};
     z-index: 1; 
     pointer-events: none;
-    box-shadow: 0 ${getSize(0.3)} ${getSize(1)} 0 rgba(#46fcb4, 0.85);
+    box-shadow: 0 0 ${getSize(1)} 0 rgba(70, 252, 180, 0.85);
     `
