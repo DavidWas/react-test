@@ -62,7 +62,7 @@ export const MagneticButton = () => {
     )
 }
 
-const size = 20;
+const size = 10;
 const getSize = (multiplier: number) => {
     return `${size * multiplier}rem`;
 }
