@@ -5,6 +5,9 @@ import InjectCheckbox from "./components/InjectCheckbox";
 import ContextCheckbox from "./components/ContextCheckbox";
 import PeopleList from "./components/RenderPropsList";
 import {MagneticButton} from "./components/MagneticButton";
+import FetchTest from "./components/FetchTest";
+import ReactMemoTest from "./components/ReactMemoTest";
+import TiltTest from "./components/TiltTest";
 
 function App() {
     const [state, setState] = useState({
@@ -29,9 +32,12 @@ function App() {
         //         })
         //     }}>{state.counter} {state.counter2}</h1>
         // </div>
-        <div style={{height:100, width:100}}>
-            <MagneticButton ></MagneticButton>
-        </div>
+        // <div style={{height:100, width:100}} data-testid={"magnetic_button"}>
+        //     <MagneticButton></MagneticButton>
+        // </div>
+        // <FetchTest></FetchTest>
+        
+        <TiltTest></TiltTest>
     );
 }
 
