@@ -22,7 +22,7 @@ const TiltTest = () => {
         // @ts-ignore
 
         <div ref={tiltRef}>
-            <button type={"button"} style={{borderStyle:"solid", borderWidth:2, borderColor:"black",height:100, width: 200}}>Push me</button>
+            <button type={"button"} style={{boxShadow: '5px 10px #888888' , backgroundColor:"cyan",borderRadius:10, borderStyle:"solid", borderWidth:2, borderColor:"black",height:100, width: 200}}>Push me</button>
         </div>
     )
 }
