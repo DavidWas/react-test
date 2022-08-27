@@ -8,6 +8,7 @@ import {MagneticButton} from "./components/MagneticButton";
 import FetchTest from "./components/FetchTest";
 import ReactMemoTest from "./components/ReactMemoTest";
 import TiltTest from "./components/TiltTest";
+import CounterReducer from "./components/CounterReducer";
 
 function App() {
     const [state, setState] = useState({
@@ -36,8 +37,9 @@ function App() {
         //     <MagneticButton></MagneticButton>
         // </div>
         // <FetchTest></FetchTest>
-        
-        <TiltTest></TiltTest>
+        <>
+            <FetchTest/>
+        </>
     );
 }
 
