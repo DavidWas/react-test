@@ -25,7 +25,6 @@ const SidebarMenu = () => {
             Selected Item: {selectedItem}
         </span>
         <SidebarContainer>
-
             {menuItems.map((title, index) => {
                 return <div onClick={()=>setSelectedItem(index)}>
                     <SidebarItem
