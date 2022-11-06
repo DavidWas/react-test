@@ -4,7 +4,8 @@ import SidebarItem from "./SidebarItem";
 
 const SidebarContainer = styled.div`
   border-radius: 25px;
-  background-color: #00fff1;
+  background: rgb(7,153,210);
+  background: linear-gradient(90deg, rgba(7,153,210,1) 0%, rgba(9,232,201,1) 100%);
   display: flex;
   flex-direction: column;
 `
@@ -26,7 +27,14 @@ const SidebarMenu = () => {
         <SidebarContainer>
 
             {menuItems.map((title, index) => {
-                return <SidebarItem onClick={() => handleClick(index)} title={title} key={index} isSelected={index == selectedItem}></SidebarItem>
+                return <div onClick={()=>setSelectedItem(index)}>
+                    <SidebarItem
+                        onClick={()=>setSelectedItem(index)}
+                        title={title}
+                        key={index}
+                        isSelected={index == selectedItem}></SidebarItem>
+                </div> 
+      
             })}
         </SidebarContainer>
     </>
