@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import SidebarItem from "./SidebarItem";
 
@@ -14,10 +14,6 @@ const SidebarMenu = () => {
     const [selectedItem, setSelectedItem] = useState<null|number>(null);
     
     const menuItems = ["Home","Settings","Contact"]
-    
-    const handleClick = (index:number) => {
-        setSelectedItem(index);
-    }
     
     return( 
     <>
