@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 import {scalePoint} from "framer-motion/types/projection/geometry/delta-apply";
 
 const MenuItem = styled(motion.div)`
-  width: 200px;
+  width: 120px;
   height: 45px;
   border-color: black;
   border-style: solid;
@@ -15,11 +15,13 @@ const MenuItem = styled(motion.div)`
 `
 
 const MenuText = styled.span`
-  color: black;
+  color: #00222d;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-size: 1.2rem;
 `
 
 interface IProps extends React.PropsWithChildren<any> {
@@ -27,10 +29,10 @@ interface IProps extends React.PropsWithChildren<any> {
     isSelected:Boolean;
 }
 
-const SidebarItem = ({title, isSelected, ...props}:IProps) => {
+const SidebarItem = ({title, isSelected}:IProps) => {
     return <MenuItem 
         animate={{
-            boxShadow: isSelected ?  "0px 0px 0px black" : "2px 2px 5px black",
+            boxShadow: isSelected ?  "0px 0px 0px #005b6a" : "2px 2px 5px #005b6a",
             backgroundColor: isSelected ? "#19c2d1FF":"#19c2d100"
         }}
         whileHover={{
