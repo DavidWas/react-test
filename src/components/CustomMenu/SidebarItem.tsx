@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {motion} from "framer-motion";
+import {scalePoint} from "framer-motion/types/projection/geometry/delta-apply";
 
 const MenuItem = styled(motion.div)`
   width: 200px;
@@ -27,7 +28,17 @@ interface IProps extends React.PropsWithChildren<any> {
 }
 
 const SidebarItem = ({title, isSelected, ...props}:IProps) => {
-    return <MenuItem animate={{boxShadow: isSelected ?  "0px 0px 0px black" : "2px 2px 5px black"}}>
+    return <MenuItem 
+        animate={{
+            boxShadow: isSelected ?  "0px 0px 0px black" : "2px 2px 5px black",
+        }}
+        whileHover={{
+            scale: 1.05
+        }}
+        whileTap={{
+            scale: 0.95
+        }}
+    >
         <MenuText>{title}</MenuText>
     </MenuItem>
 }
