@@ -31,12 +31,10 @@ const SidebarItem = ({title, isSelected, ...props}:IProps) => {
     return <MenuItem 
         animate={{
             boxShadow: isSelected ?  "0px 0px 0px black" : "2px 2px 5px black",
+            backgroundColor: isSelected ? "#19c2d1FF":"#19c2d100"
         }}
         whileHover={{
-            scale: 1.05
-        }}
-        whileTap={{
-            scale: 0.95
+            scale: isSelected ? 1.0 : 1.05
         }}
     >
         <MenuText>{title}</MenuText>
