@@ -15,12 +15,13 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $second;
   font-size: 10px;
   margin: 0;
   padding: 0;
   color: $ciBlue;
   font-family: $roboto;
+  background: rgb(232,9,227);
+  background: linear-gradient(120deg, rgba(232,9,227,1) 0%, rgba(121,9,107,1) 48%, rgba(119,7,210,1) 100%);
 }
 
 * {
